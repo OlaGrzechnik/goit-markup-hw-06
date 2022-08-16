@@ -548,13 +548,16 @@ body {
   line-height: 1.2;
 }
 
-input {
+.form-input {
   width: 448px;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   margin-top: 4px;
   margin-bottom: 4px;
+}
+.form-input:focus {
+  outline-color: var(--blue);
 }
 
 .form-icon {
@@ -625,6 +628,12 @@ input {
   letter-spacing: 1%;
   resize: none;
 }
+.textarea:focus {
+  outline-color: var(--blue);
+}
+.form-icon:focus svg {
+  fill: var(--blue);
+}
 
 .send-form {
   width: 200px;
@@ -644,7 +653,24 @@ input {
   border: 2px solid rgba(33, 33, 33, 1);
   border-radius: 4px;
 }
-.checkbox {
+.policies-checkbox {
   width: 16px;
   height: 16px;
+}
+.policies-checkbox:checked + .policies::before {
+  background-color: var(--blue);
+  border: 1px solid white;
+  background-image: url(../images/tick.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.visualy-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px 1px 1px 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
 }
