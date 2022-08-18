@@ -64,24 +64,24 @@
       <div class="container banner">
         <h1 class="slogan">EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU</h1>
         <button type="button" class="button bluebutton" data-modal-open>zamów usługę</button>
-        <div class="backdrop <!--is-hidden-->"data-modal><div class="modal"><form name="lead">
+        <div class="backdrop is-hidden"data-modal><div class="modal"><form name="lead">
           <h4 class ="form-title">Zostaw swoje dane w formularzu poniżej</h4>
           <label class="label">
-            Imię <div class=form-icon-person><svg>
+            Imię <input type="text" name="name" class="form-input-name" required><svg class=form-icon-person>
               <use height="18px"
               width="18px"
-              href="./images/icons.svg#icon-person-black"></use></svg></div><input type="text" name="name" class="form-input-name">
+              href="./images/icons.svg#icon-person-black"></use></svg>
             </label>
-          <label class="label">Telefon <div class=form-icon-phone><svg>
+          <label class="label">Telefon <input type="tel" name="phonenumber"class="form-input-phone" required><svg class=form-icon-phone>
             <use height="18px"
             width="18px"
-            href="./images/icons.svg#icon-phone-black"></use></svg></div><input type="tel" name="phonenumber"class="form-input-phone"></label>
-          <label class="label">Email <div class=form-icon-email><svg>
+            href="./images/icons.svg#icon-phone-black"></use></svg></label>
+          <label class="label">Email <input type="text" name="email" class="form-input-email" required><svg class=form-icon-email>
             <use height="18px"
             width="18px"
-            href="./images/icons.svg#icon-email-black"></use></svg></div><input type="text" name="email" class="form-input-email"></label>
+            href="./images/icons.svg#icon-email-black"></use></svg></label>
           <label class="label">Komentarz <textarea name="comment" placeholder="Wprowadź tekst" class="textarea"></textarea></label>
-          <input type="checkbox" class="policies-checkbox"> <!--visualy-hidden--><label class="policies"> Oświadczam iż akceptuję <a href="#">Regulamin</a> i <a href="#">Politykę Prywatności</a>.</label>
+          <input type="checkbox" class="policies-checkbox" id="checkbox"><label for="checkbox" class="policies"> Oświadczam iż akceptuję <a href="#">Regulamin</a> i <a href="#">Politykę Prywatności</a>.</label>
           <button type="subbmit" class="send-form">Wyślij</button></form><button type="button" class="close-btn" data-modal-close>
             <svg class="xclose"><use 
             height="18px"
@@ -528,7 +528,7 @@
               </ul></div>
             </div>
           </div>
-          <div class="joinus">
+          <div class="joinus-container">
             <h4 class="joinus-header">DOŁĄCZ DO NAS</h4>
             <ul class="no-bullets social-list">
               <li><a class="social-icon-circle-footer" href="#">
@@ -574,7 +574,12 @@
               </li>
             </ul>
           </div>
+          <div class="newsletter-container">
+            <h4 class="joinus-header">ZAPISZ SIĘ DO NEWSLETERA</h4><div class="signin">
+            <form><input type="email" name="newsletersignin" class="newsletter-input" placeholder="E-mail" required></form>
+            <button type="submit" class="newsletter-button">Zapisz się<svg class="send-icon"><use height="24px" width="24px" href="./images/icons.svg#icon-icon_send"></use></svg></button></div>
         </div>
+        
       </div>
     </footer>
     <script src="./js/modal.js"></script>

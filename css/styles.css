@@ -474,7 +474,7 @@ body {
   font-size: 14px;
   font-weight: 700;
 }
-.joinus {
+.joinus-container {
   padding-top: 72px;
 }
 .active {
@@ -548,32 +548,8 @@ body {
   line-height: 1.2;
 }
 
-.form-input {
-  width: 448px;
-  height: 40px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-  margin-top: 4px;
-  margin-bottom: 4px;
-}
-.form-input-name {
-  width: 448px;
-  height: 40px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-  margin-top: 4px;
-  margin-bottom: 4px;
-}
-
-.form-input-phone {
-  width: 448px;
-  height: 40px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-  margin-top: 4px;
-  margin-bottom: 4px;
-}
-
+.form-input-name,
+.form-input-phone,
 .form-input-email {
   width: 448px;
   height: 40px;
@@ -581,35 +557,28 @@ body {
   border-radius: 4px;
   margin-top: 4px;
   margin-bottom: 4px;
+  padding-left: 42px;
 }
 
-.form-input-name:focus {
-  outline-color: var(--blue);
-}
-.form-input-name:focus + .form-icon-person svg {
-  fill: var(--blue);
-}
-.form-input-phone:focus {
-  outline-color: var(--blue);
-}
+.form-input-name:focus,
+.form-input-phone:focus,
 .form-input-email:focus {
   outline-color: var(--blue);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-icon-person {
-  position: absolute;
-  top: 50%;
-  left: 3%;
-}
-.form-icon-phone {
-  position: absolute;
-  top: 50%;
-  left: 3%;
-}
+.form-icon-person,
+.form-icon-phone,
 .form-icon-email {
   position: absolute;
   top: 50%;
   left: 3%;
+}
+.form-input-name:focus + .form-icon-person,
+.form-input-phone:focus + .form-icon-phone,
+.form-input-email:focus + .form-icon-email {
+  fill: var(--blue);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .policies {
@@ -679,8 +648,9 @@ body {
 }
 .textarea:focus {
   outline-color: var(--blue);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.form-icon-person:focus svg {
+.form-icon-person:hover svg {
   fill: var(--blue);
 }
 
@@ -693,6 +663,7 @@ body {
   border-radius: 4px;
   margin-top: 30px;
   border: 0;
+  cursor: pointer;
 }
 
 .policies::before {
@@ -706,6 +677,7 @@ body {
 .policies-checkbox {
   width: 16px;
   height: 16px;
+  display: none;
 }
 .policies-checkbox:checked + .policies::before {
   background-color: var(--blue);
@@ -714,13 +686,48 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
 }
-.visualy-hidden {
-  position: absolute !important;
-  clip: rect(1px 1px 1px 1px);
-  clip: rect(1px 1px 1px 1px);
-  padding: 0 !important;
-  border: 0 !important;
-  height: 1px !important;
-  width: 1px !important;
-  overflow: hidden;
+.newsletter-container {
+  padding-top: 72px;
+}
+.signin {
+  display: inline-flex;
+  gap: 12px;
+}
+.newsletter-input {
+  margin-top: 20px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  width: 358px;
+  height: 50px;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  padding-left: 16px;
+}
+.newsletter-input:focus {
+  outline-color: var(--blue);
+  border: 0;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.newsletter-button {
+  margin-top: 20px;
+  width: 200px;
+  height: 50px;
+  text-align: left;
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 42px;
+  background-color: var(--blue);
+  border: 0;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  color: white;
+  font-size: 16px;
+}
+.send-icon {
+  position: absolute;
+  left: 148px;
+  fill: white;
 }
