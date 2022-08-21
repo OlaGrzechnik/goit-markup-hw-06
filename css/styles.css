@@ -625,8 +625,9 @@ body {
 .xclose {
   fill: rgba(0, 0, 0, 1);
   position: relative;
-  top: 5px;
-  left: 5px;
+  top: 2px;
+  height: 18px;
+  width: 18px;
 }
 .textarea {
   width: 448px;
@@ -665,7 +666,7 @@ body {
 }
 .policies {
   font-size: 14px;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 .policies::before {
   content: "";
